@@ -56,9 +56,106 @@ public class Ex01_array {
 		
 	}
 	
+	public static void ex03() {
+		
+		// 배열 길이
+		int length = 5;
+		
+		// 배열 선언 + 생성
+		int[] arr = new int[length];
+		
+		// 배열 순회
+		for(int i = 0; i < length; i++) {
+			System.out.println(arr[i]);
+		}
+		
+	}
 	
+	public static void ex04() {
+		
+		// 배열 선언 + 생성
+		int[] arr = new int[5];
+		
+		// 배열 순회
+		for(int i = 0; i < arr.length; i++) {
+			System.out.println(arr[i]);
+		}
+		
+	}
+	
+	public static void ex05() {  // 연습
+		
+		// 점수를 배열로 관리하기
+		int[] scores = new int[5];
+		
+		// 각 점수를 배열에 저장하기
+		scores[0] = 100;
+		scores[1] = 70;
+		scores[2] = 95;
+		scores[3] = 83;
+		scores[4] = 76;
+		
+		// 합계(평균), 최대/최소
+		int total = 0;  // Zero
+		int max = 0;    // 가장 작은 값
+		int min = 100;  // 가장 큰 값
+		
+		for(int i = 0; i < scores.length; i++) {
+			total += scores[i];
+			if(max < scores[i]) {
+				max = scores[i];
+			}
+			if(min > scores[i]) {
+				min = scores[i];
+			}
+		}
+		
+		System.out.println("합계 : " + total + "점");
+		System.out.println("평균 : " + (double)total / scores.length + "점");
+		System.out.println("최대 : " + max + "점");
+		System.out.println("최소 : " + min + "점");
+		
+	}
+	
+	public static void ex06() {  // 연습
+		
+		// 점수를 배열로 관리하기
+		int[] scores = new int[5];
+		
+		// 각 점수를 배열에 저장하기
+		scores[0] = 100;
+		scores[1] = 70;
+		scores[2] = 95;
+		scores[3] = 83;
+		scores[4] = 76;
+		
+		// 배열의 첫 번째 요소를 초기화로 저장하고,
+		// 배열의 두 번째 요소부터 순회한다.
+		
+		// 합계(평균), 최대/최소
+		int total = scores[0];
+		int max = scores[0];
+		int min = scores[0];
+		
+		for(int i = 1; i < scores.length; i++) {
+			total += scores[i];
+			if(max < scores[i]) {
+				max = scores[i];
+			}
+			if(min > scores[i]) {
+				min = scores[i];
+			}
+		}
+		
+		System.out.println("합계 : " + total + "점");
+		System.out.println("평균 : " + (double)total / scores.length + "점");
+		System.out.println("최대 : " + max + "점");
+		System.out.println("최소 : " + min + "점");
+		
+	}
+
 	public static void main(String[] args) {
-		ex02();
+		ex06();
 	}
 
 }
