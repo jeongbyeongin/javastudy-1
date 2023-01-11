@@ -36,9 +36,4 @@ public class User {
 		return pw;
 	}
 	
-	
-	
-	
-	
-	
 }
