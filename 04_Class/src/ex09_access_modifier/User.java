@@ -31,6 +31,7 @@ public class User {
 	// 필드
 	private String id;
 	private String pw;
+	private boolean isVip;
 	
 	// 메소드
 	public String getId() {
@@ -44,6 +45,12 @@ public class User {
 	}
 	public void setPw(String pw) {
 		this.pw = pw;
+	}
+	public boolean isVip() {
+		return isVip;
+	}
+	public void setVip(boolean isVip) {
+		this.isVip = isVip;
 	}
 	
 }
