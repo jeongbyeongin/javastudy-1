@@ -13,6 +13,23 @@ package ex01_is_a;
 	2. 자식 클래스에게 기능을 제공하다.
 */
 
+/*
+    ┌───────┐
+    │    Person    │
+    │───────│
+    │     eat()    │
+    │    sleep()   │
+    └───────┘
+            ▲
+            │
+            │
+    ┌───────┐
+    │    Student   │
+    │───────│
+    │    study()   │
+    └───────┘            
+*/
+
 public class Person {
 
 	public void eat() {
