@@ -20,6 +20,8 @@ public class Bakery {
 	// 구매자에게 돈을 받는다. 구매자에게 빵과 잔돈을 준다.
 	public BreadAndChange sell(int money) {
 		
+		
+		
 	}
 	
 	// 판매 현황 메소드
@@ -27,6 +29,5 @@ public class Bakery {
 		System.out.println("남은 빵 : " + breadCount + "개");
 		System.out.println("현재 돈 : " + bakeryMoney + "원");
 	}
-	
 	
 }

@@ -15,6 +15,8 @@ public class Bus {
 	
 	// 승차 메소드
 	public void riding(int seatNo, Person person) {  // riding(1, new Person("홍길동")) : 1번 좌석에 앉은 홍길동
+
+		
 		
 	}
 	
@@ -27,3 +29,4 @@ public class Bus {
 	}
 	
 }
+

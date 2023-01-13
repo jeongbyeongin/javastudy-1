@@ -18,6 +18,8 @@ public class Customer {
 	// 특정 빵집에 얼마의 돈을 지불한다.
 	public void buy(Bakery bakery, int money) {
 		
+		
+		
 	}
 	
 	// 구매자 현황 메소드
@@ -27,3 +29,4 @@ public class Customer {
 	}
 	
 }
+
