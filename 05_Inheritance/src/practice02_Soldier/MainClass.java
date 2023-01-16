@@ -1,4 +1,4 @@
-package practice02_soldier;
+package practice02_Soldier;
 
 public class MainClass {
 
