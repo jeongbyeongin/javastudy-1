@@ -141,6 +141,96 @@ public class MainClass {
 		
 	}
 	
+	// 문제8. int score에 해당하는 학점을 출력하시오. switch문을 활용하시오.
+	// 100    : S
+	//  99~97 : A+
+	//  96~94 : A0
+	//  93~90 : A-
+	//  89~87 : B+
+	//  86~84 : B0
+	//  83~80 : B-
+	//  79~77 : C+
+	//  76~74 : C0
+	//  73~70 : C-
+	//  69~0  : F
+	// 예시)
+	// 점수 98점은 학점 A+입니다.
+	public static void ex08() {
+		int score = 98;
+		char grade, point;
+		// point
+		switch (score % 10) {
+		case 9: case 8: case 7:
+			point = '+'; break;
+		case 6: case 5: case 4:
+			point = '0'; break;
+		default:
+			point = '-';
+		}
+		// grade
+		switch (score / 10) {
+		case 10: 
+			grade = 'S'; 
+			point = ' '; 
+			break;
+		case 9: 
+			grade = 'A'; 
+			break;
+		case 8: 
+			grade = 'B'; 
+			break;
+		case 7: 
+			grade = 'C'; 
+			break;
+		default: 
+			grade = 'F'; 
+			point = ' ';
+		}
+		System.out.println("점수 " + score + "점은 학점 " + grade + point + "입니다.");
+	}
+	
+	// 문제9. String height 정보를 이용해 워터파크에서 탑승이 가능한 모든 어트랙션을 출력하시오.
+	//   1. 슬라이드 : 120 이상 탑승 가능
+	//   2. 부메랑고 : 130 이상 탑승 가능
+	//   3. 인피닛풀 : 140 이상 탑승 가능
+	// 예시(키가 135.5인 경우)
+	// 슬라이드 탑승 가능합니다.
+	// 부메랑고 탑승 가능합니다.
+	public static void ex09() {
+		
+		String height = "135.5";
+		double tall = Double.parseDouble(height);
+		if(tall >= 120) {
+			System.out.println("슬라이드 탑승 가능합니다.");
+			if(tall >= 130) {
+				System.out.println("부메랑고 탑승 가능합니다.");
+				if(tall >= 140) {
+					System.out.println("인피닛풀 탑승 가능합니다.");
+				}
+			}
+		}
+		
+	}
+	
+	// 문제10. int second에 저장된 초를 시/분/초로 변환하여 출력하시오.
+	// 1분이 넘는 경우 '분'까지 표시하고, 1시간이 넘는 경우 '시'까지 표시하시오.
+	// 예시1)
+	// 40초는 40초입니다.
+	// 예시2)
+	// 90초는 1분 30초입니다.
+	// 예시3)
+	// 3690초는 1시간 1분 30초입니다.
+	public static void ex10() {
+		int second = 3690;
+		if(second < 60) {
+			System.out.println(second + "는 " + second + "초입니다.");
+		} else if(second < 3600) {
+			System.out.println(second + "는 " + (second / 60) + "분 " + (second % 60) + "초입니다.");
+		} else {
+			System.out.println(second + "는 " + (second / 3600) + "시간 " + (second % 3600 / 60) + "분 " + (second % 60) + "초입니다.");
+		}
+	}
+	
 	public static void main(String[] args) {
 		ex07();
 	}
