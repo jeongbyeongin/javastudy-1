@@ -6,17 +6,17 @@ public class Gun {
 	public static final int MAX_BULLET = 10;
 	
 	// 총알 넣기
-	public void reload(int bullet) {
+	public void reload(int bullet) throws RuntimeException {  // reload 메소드를 호출하는 곳으로 예외를 던지겠다.
 		if(this.bullet + bullet > MAX_BULLET) {
-			return;
+			throw new RuntimeException("장전 불가능");
 		}
 		this.bullet += bullet;
 	}
 	
 	// 총 쏘기
-	public void shoot() {
+	public void shoot() throws RuntimeException {
 		if(bullet == 0) {
-			return;
+			throw new RuntimeException("총알 부족");
 		}
 		bullet--;
 	}
