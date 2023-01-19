@@ -1,5 +1,6 @@
 package ex01_try_catch;
 
+import java.io.FileReader;
 import java.util.Scanner;
 
 public class MainClass {
@@ -62,6 +63,17 @@ public class MainClass {
 			System.out.println("정수 덧셈만 가능합니다.");
 		} catch(Exception e) {  // 마지막 catch 블록은 Exception으로 모든 예외를 처리한다.
 			System.out.println("예외가 발생했습니다.");
+		}
+		
+	}
+
+	public static void ex04() {
+
+		try {
+			FileReader fr = new FileReader("sample.txt");
+			fr.close();
+		} catch(Exception e) {
+			System.out.println("예외가 발생하였다.");
 		}
 		
 	}
