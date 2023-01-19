@@ -35,7 +35,7 @@ public class ParkingLot {
 	}
 	
 	public void printAllCars() {
-		
+		System.out.println(name);
 	}
 	
 	public void manage() {
