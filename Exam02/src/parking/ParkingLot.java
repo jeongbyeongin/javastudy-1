@@ -25,16 +25,44 @@ public class ParkingLot {
 		String carNo = sc.next();
 		System.out.print("모델 >>> ");
 		String model = sc.next();
-		cars[idx++] = new Car(carNo, model);
+		Car car = new Car(carNo, model);
+		cars[idx++] = car;  // cars[0] = car;  cars[1] = car;  cars[2] = car; ,,,
 		System.out.println("차량번호 " + carNo + " 차량이 등록되었습니다.");
 	}
 	
+	public void deleteCar() {
+		
+	}
+	
+	public void printAllCars() {
+		
+	}
+	
+	public void manage() {
+		
+		while(true) {
+			
+			System.out.print("1.추가  2.삭제  3.전체  0.종료 >>> ");
+			String choice = sc.next();
+			
+			switch(choice) {
+			case "1":
+				addCar();  // addCar 호출
+				break;
+			case "2":
+				deleteCar();  // deleteCar 호출
+				break;
+			case "3":
+				printAllCars();  // printAllCars 호출
+				break;
+			case "0":
+				return;  // manage 메소드 종료
+			default:
+				System.out.println("존재하지 않는 메뉴입니다.");
+			}
+			
+		}
+		
+	}
+	
 }
-
-
-
-
-
-
-
-
