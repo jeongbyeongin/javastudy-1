@@ -42,7 +42,7 @@ public class Singer {
 		System.out.println("가수이름 : " + name);
 		System.out.println("대표곡 목록");
 		for(int i = 0; i < idx; i++) {
-			System.out.println(songs[i]);
+			songs[i].info();
 		}
 	}
 	

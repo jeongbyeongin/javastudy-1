@@ -27,9 +27,8 @@ public class Song {
 		this.genre = genre;
 	}
 
-	@Override
-	public String toString() {
-		return "Song [title=" + title + ", genre=" + genre + "]";
+	public void info() {
+		System.out.println("[title=" + title + ", genre=" + genre + "]");
 	}
 	
 }
