@@ -18,7 +18,7 @@ public class WeekScheduler {
 	private void makeSchedule() {
 		System.out.println("▒▒▒ 등록 ▒▒▒");
 		System.out.print("요일 입력 >>> ");
-		String dayName = sc.next().substring(0, 1);
+		String dayName = sc.next().substring(0, 1);  // "월요일"처럼 입력하더라도 "월"만 가져다 사용한다.
 		sc.nextLine();
 		for(int i = 0; i < week.length; i++) {
 			if(dayName.equals(dayNames[i])) {
@@ -63,9 +63,9 @@ public class WeekScheduler {
 				} else {
 					System.out.println(dayName + "요일의 스케쥴은 " + week[i].getSchedule() + "입니다.");
 					System.out.print("변경할까요?(y/n) >>> ");
-					String yesNo = sc.next().substring(0, 1);
+					String yesNo = sc.next().substring(0, 1);  // "yes"처럼 입력하더라도 "y"만 사용한다.
 					sc.nextLine();
-					if(yesNo.equalsIgnoreCase("y")) {
+					if(yesNo.equalsIgnoreCase("y")) {  // "y"나 "Y" 모두 처리 가능하다.
 						System.out.print("변경할 스케쥴 입력 >> ");
 						String schedule = sc.nextLine();
 						week[i].setSchedule(schedule);
